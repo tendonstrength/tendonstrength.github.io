@@ -1,0 +1,176 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Cutter - Austin, TX</title>
+</head>
+<style>
+    body {
+        background-color: #cccccc;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+    a {
+        color: #7a41ff;
+        ;
+    }
+
+    a:visited {
+        color: rgb(255, 0, 0);
+    }
+
+    div {
+        text-align: center;
+    }
+
+    header {
+        margin: 42px 0;
+        border-bottom: 5px ridge #03FEFF;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    header .menu {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    header .menu span {
+        margin: 10px;
+    }
+
+    @media screen and (max-width: 500px) {
+        header .logo {
+            width: 100%;
+        }
+    }
+
+    .content-section {
+        display: none;
+    }
+
+    .content-section.visible {
+        display: block;
+    }
+
+    #contact a {
+        font-size: 2rem;
+        color: blue;
+        margin: 0 2rem;
+    }
+
+    footer {
+        text-align: center;
+        height: 30px;
+        color: #7a41ff;
+        line-height: 30px;
+        font-size: 1.3em;
+        margin-top: 2em;
+    }
+
+    footer div {
+        margin-bottom: .5em;
+    }
+
+    footer img {
+        height: 2em;
+    }
+
+    #home a img {
+        vertical-align: middle;
+        height: 7em;
+        margin: 0 1.5em 1.5em 0;
+    }
+
+    #home a span {
+        margin-right: 1em;
+        font-size: 1.5em;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .awards img:first-of-type {
+        height: 5em;
+    }
+
+    .awards {
+        margin-top: 2em;
+    }
+</style>
+<script>
+    document.addEventListener('click', function (event) {
+        if (!event.target.classList.contains('menu-item')) return;
+        var content = document.querySelector(event.target.hash);
+        var previous = document.querySelector('.visible');
+        if (previous) previous.classList.remove('visible');
+        if (content) content.classList.add('visible');
+
+        event.preventDefault();
+    }, false);
+</script>
+
+<body>
+    <header>
+        <div>
+            <img src="images/gif_guitarman.gif" />
+            <img class="logo" src="images/dark_cutter_vintage.png" />
+            <img src="images/gif_guitarman.gif" />
+        </div>
+        <div class="menu">
+            <span><a class="menu-item" href="#home">Home</a></span>
+            <span><a class="menu-item" href="#shows">Shows</a></span>
+            <span><a class="menu-item" href="#links">Links</a></span>
+            <span><a class="menu-item" href="#contact">Contact</a></span>
+        </div>
+    </header>
+
+    <div class="content-section visible" id="home">
+        <h2>Our new EP is out now!!!! Check it out!!!</h2>
+        <div class="flex-container">
+            <div><a href="#"><span>Apple Music!!! </span>
+                    <image src="images/apple.gif" /></a></div>
+            <div><a href="#"><span>Napster!!! </span>
+                    <image src="images/napster.gif" /></a></div>
+            <div><a href="#"><span>Spotify!!! </span>
+                    <image src="images/spotify.gif" /></a></div>
+            <div><a href="#"><span>Vinyl!!! </span>
+                    <image src="images/vinyl.gif" /></a></div>
+        </div>
+    </div>
+    <div class="content-section" id="shows"><img src="images/underconstruction.gif" /></div>
+    <div class="content-section" id="contact">
+        <div class="flex-container">
+            <image src="images/email.gif" /><a href="mailto:dark-cutter@aol.com">dark-cutter@aol.com</a>
+            <image src="images/email.gif" />
+        </div>
+    </div>
+    <div class="content-section" id="links">
+        <div>
+            <img src="images/hot.gif" />
+        </div>
+        <div>
+            <span>Coming soon!</span>
+        </div>
+    </div>
+    <footer>
+        <div>Best viewed with: </div>
+
+        <div>
+            <image src="images/netscape.gif" />
+        </div>
+        <div class="awards">
+            <image src="images/coolsite.jpg" />
+        </div>
+    </footer>
+</body>
+
+</html>
