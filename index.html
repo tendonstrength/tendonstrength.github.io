@@ -1,5 +1,5 @@
 <html lang="en">
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,6 @@
 
     a {
         color: #7a41ff;
-        ;
     }
 
     a:visited {
@@ -28,6 +27,11 @@
     header {
         margin: 42px 0;
         border-bottom: 5px ridge #03FEFF;
+    }
+
+    header .menu-item.active-menu {
+        color: blue;
+        text-decoration: none;
     }
 
     header h1 {
@@ -45,10 +49,57 @@
         margin: 10px;
     }
 
-    @media screen and (max-width: 500px) {
-        header .logo, #links img {
+    img.facebook {
+        height: 3em;
+    }
+
+    .email-item {
+            justify-content: space-evenly;
+            margin: 0.8em;
+        }
+
+    @media screen and (max-width: 659px) {
+
+        header .logo,
+        #shows img,
+        #links img {
             width: 100%;
         }
+
+        body .flex-container {
+            flex-direction: column;
+        }
+
+       
+
+        #contact .email-item a {
+            margin: 0;
+        }
+
+    }
+
+    #contact .flex-container {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 426px) {
+        #home img.coming-soon {
+            margin-top: 1.5em;
+        }
+
+    }
+
+    @media screen and (max-width: 329px) {
+        body #home a img {
+            height: 5em;
+        }
+
+        body #home a span,
+        #home span.vinyl {
+            font-size: 1em;
+        }
+
+
     }
 
     .content-section {
@@ -68,7 +119,6 @@
     footer {
         text-align: center;
         height: 30px;
-        color: #7a41ff;
         line-height: 30px;
         font-size: 1.3em;
         margin-top: 2em;
@@ -82,13 +132,13 @@
         height: 2em;
     }
 
-    #home a img {
+    #home img {
         vertical-align: middle;
         height: 7em;
         margin: 0 1.5em 1.5em 0;
     }
 
-    #home a span {
+    #home span {
         margin-right: 1em;
         font-size: 1.5em;
     }
@@ -110,6 +160,9 @@
 <script>
     document.addEventListener('click', function (event) {
         if (!event.target.classList.contains('menu-item')) return;
+        var previousSelection = document.querySelector('.active-menu');
+        if (previousSelection) previousSelection.classList.remove('active-menu');
+        event.target.classList.add('active-menu');
         var content = document.querySelector(event.target.hash);
         var previous = document.querySelector('.visible');
         if (previous) previous.classList.remove('visible');
@@ -127,7 +180,7 @@
             <img src="images/gif_guitarman.gif" />
         </div>
         <div class="menu">
-            <span><a class="menu-item" href="#home">Home</a></span>
+            <span><a class="menu-item active-menu" href="#home">Home</a></span>
             <span><a class="menu-item" href="#shows">Shows</a></span>
             <span><a class="menu-item" href="#links">Links</a></span>
             <span><a class="menu-item" href="#contact">Contact</a></span>
@@ -137,21 +190,28 @@
     <div class="content-section visible" id="home">
         <h2>Our new EP is out now!!!! Check it out!!!</h2>
         <div class="flex-container">
-            <div><a href="#"><span>Apple Music!!! </span>
+            <div><a target=”_blank” href="https://music.apple.com/us/artist/dark-cutter/1495264387"><span>Apple
+                        Music!!!</span>
                     <image src="images/apple.gif" /></a></div>
-            <div><a href="#"><span>Napster!!! </span>
+            <div><a target=”_blank”
+                    href="https://us.napster.com/artist/dark-cutter/album/dark-cutter-ep"><span>Napster!!! </span>
                     <image src="images/napster.gif" /></a></div>
-            <div><a href="#"><span>Spotify!!! </span>
+            <div><a target=”_blank” href="https://open.spotify.com/artist/4MjuDDKdnRJeB0Zs956niq"><span>Spotify!!!
+                    </span>
                     <image src="images/spotify.gif" /></a></div>
-            <div><a href="#"><span>Vinyl!!! </span>
-                    <image src="images/vinyl.gif" /></a></div>
+            <div><span class="vinyl">Vinyl!!! (Coming Soon!!!)</span>
+                <image class="coming-soon" src="images/vinyl.gif" /></a></div>
         </div>
     </div>
     <div class="content-section" id="shows"><img src="images/underconstruction.gif" /></div>
     <div class="content-section" id="contact">
         <div class="flex-container">
-            <image src="images/email.gif" /><a href="mailto:dark-cutter@aol.com">dark-cutter@aol.com</a>
-            <image src="images/email.gif" />
+            <div class="email-item"><a target=”_blank” href="https://www.facebook.com/DarkCutterMusic"><span>Like us on Facebook!!</span></a></div>
+                    <div class="email-item"><image class="facebook" src="images/facebook.gif" /></div>
+            <div class="email-item"> <a href="mailto:dark-cutter@aol.com">dark-cutter@aol.com</a></div>
+            <div class="email-item">
+                <image src="images/email.gif" />
+            </div>
         </div>
     </div>
     <div class="content-section" id="links">
@@ -164,13 +224,13 @@
     </div>
     <footer>
         <div>Best viewed with: </div>
-
         <div>
             <image src="images/netscape.gif" />
         </div>
         <div class="awards">
             <image src="images/coolsite.jpg" />
         </div>
+        <div class="copyright"><span>© 1997 Rad Broz Studioz</span></div>
     </footer>
 </body>
 
