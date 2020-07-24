@@ -1,183 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="index.js"></script>
     <title>Dark Cutter - Austin, TX</title>
 </head>
-<style>
-    
-    /* general styles  */
-    body {
-        background-color: #cccccc;
-        font-family: 'Comic Neue', cursive;
-    }
-
-    a {
-        color: #7a41ff;
-    }
-
-    a:visited {
-        color: rgb(255, 0, 0);
-    }
-
-    div {
-        text-align: center;
-    }
-
-    .flex-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    /* header styles */
-    header {
-        margin: 42px 0;
-        border-bottom: 5px ridge #03FEFF;
-    }
-
-    header .menu-item.active-menu {
-        color: blue;
-        text-decoration: none;
-    }
-
-    header h1 {
-        font-size: 3em;
-    }
-
-    header .menu {
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        font-size: 1.2em;
-    }
-
-    header .menu span {
-        margin: 10px;
-    }
-
-    img.facebook {
-        height: 3em;
-    }
-
-    .email-item {
-            justify-content: space-evenly;
-            margin: 0.8em;
-        }
-
-    @media screen and (max-width: 659px) {
-
-        header .logo,
-        #shows img,
-        #links img {
-            width: 100%;
-        }
-
-        body .flex-container {
-            flex-direction: column;
-        }
-
-        #contact .email-item a {
-            margin: 0;
-        }
-
-        header img:first-of-type {
-            display: none;
-        }
-
-    }
-
-    #contact .flex-container {
-        flex-direction: column;
-    }
-
-    @media screen and (max-width: 426px) {
-        #home img.coming-soon {
-            margin-top: 1.5em;
-        }
-    }
-
-    @media screen and (max-width: 329px) {
-        body #home a img {
-            height: 5em;
-        }
-
-        body #home a span,
-        #home span.vinyl {
-            font-size: 1em;
-        }
-
-    }
-
-    .content-section {
-        display: none;
-    }
-
-    .content-section.visible {
-        display: block;
-    }
-
-    #contact a {
-        font-size: 2rem;
-        color: blue;
-        margin: 0 2rem;
-    }
-
-    footer {
-        text-align: center;
-        height: 30px;
-        line-height: 30px;
-        font-size: 1.3em;
-        margin-top: 2em;
-    }
-
-    footer div {
-        margin-bottom: .5em;
-    }
-
-    footer img {
-        height: 2em;
-    }
-
-    #home img {
-        vertical-align: middle;
-        height: 7em;
-        margin: 0 1.5em 1.5em 0;
-    }
-
-    #home span {
-        margin-right: 1em;
-        font-size: 1.5em;
-    }
-
-    
-
-    .awards img:first-of-type {
-        height: 5em;
-    }
-
-    .awards {
-        margin-top: 2em;
-    }
-
-   
-</style>
-<script>
-    document.addEventListener('click', function (event) {
-        if (!event.target.classList.contains('menu-item')) return;
-        var previousSelection = document.querySelector('.active-menu');
-        if (previousSelection) previousSelection.classList.remove('active-menu');
-        event.target.classList.add('active-menu');
-        var content = document.querySelector(event.target.hash);
-        var previous = document.querySelector('.visible');
-        if (previous) previous.classList.remove('visible');
-        if (content) content.classList.add('visible');
-
-        event.preventDefault();
-    }, false);
-</script>
 
 <body>
     <header>
@@ -200,8 +31,7 @@
             <div><a href="https://music.apple.com/us/artist/dark-cutter/1495264387"><span>Apple
                         Music!!!</span>
                     <image src="images/apple.gif" /></a></div>
-            <div><a 
-                    href="https://us.napster.com/artist/dark-cutter/album/dark-cutter-ep"><span>Napster!!! </span>
+            <div><a href="https://us.napster.com/artist/dark-cutter/album/dark-cutter-ep"><span>Napster!!! </span>
                     <image src="images/napster.gif" /></a></div>
             <div><a href="https://open.spotify.com/artist/4MjuDDKdnRJeB0Zs956niq"><span>Spotify!!!
                     </span>
@@ -213,8 +43,11 @@
     <div class="content-section" id="shows"><img src="images/underconstruction.gif" /></div>
     <div class="content-section" id="contact">
         <div class="flex-container">
-            <div class="email-item"><a target=”_blank” href="https://www.facebook.com/DarkCutterMusic"><span>Like us on Facebook!!</span></a></div>
-                    <div class="email-item"><image class="facebook" src="images/facebook.gif" /></div>
+            <div class="email-item"><a target=”_blank” href="https://www.facebook.com/DarkCutterMusic"><span>Like us on
+                        Facebook!!</span></a></div>
+            <div class="email-item">
+                <image class="facebook" src="images/facebook.gif" />
+            </div>
             <div class="email-item"> <a href="mailto:info@dark-cutter.com">info@dark-cutter.com</a></div>
             <div class="email-item">
                 <image src="images/email.gif" />
