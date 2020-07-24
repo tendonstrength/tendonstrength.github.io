@@ -7,6 +7,8 @@
     <title>Dark Cutter - Austin, TX</title>
 </head>
 <style>
+    
+    /* general styles  */
     body {
         background-color: #cccccc;
         font-family: 'Comic Neue', cursive;
@@ -24,6 +26,13 @@
         text-align: center;
     }
 
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* header styles */
     header {
         margin: 42px 0;
         border-bottom: 5px ridge #03FEFF;
@@ -70,10 +79,12 @@
             flex-direction: column;
         }
 
-       
-
         #contact .email-item a {
             margin: 0;
+        }
+
+        header img:first-of-type {
+            display: none;
         }
 
     }
@@ -86,7 +97,6 @@
         #home img.coming-soon {
             margin-top: 1.5em;
         }
-
     }
 
     @media screen and (max-width: 329px) {
@@ -98,7 +108,6 @@
         #home span.vinyl {
             font-size: 1em;
         }
-
 
     }
 
@@ -143,11 +152,7 @@
         font-size: 1.5em;
     }
 
-    .flex-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+    
 
     .awards img:first-of-type {
         height: 5em;
@@ -156,6 +161,8 @@
     .awards {
         margin-top: 2em;
     }
+
+   
 </style>
 <script>
     document.addEventListener('click', function (event) {
@@ -208,7 +215,7 @@
         <div class="flex-container">
             <div class="email-item"><a target=”_blank” href="https://www.facebook.com/DarkCutterMusic"><span>Like us on Facebook!!</span></a></div>
                     <div class="email-item"><image class="facebook" src="images/facebook.gif" /></div>
-            <div class="email-item"> <a href="mailto:dark-cutter@aol.com">dark-cutter@aol.com</a></div>
+            <div class="email-item"> <a href="mailto:info@dark-cutter.com">info@dark-cutter.com</a></div>
             <div class="email-item">
                 <image src="images/email.gif" />
             </div>
