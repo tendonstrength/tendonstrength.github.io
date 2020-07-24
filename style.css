@@ -28,12 +28,12 @@
         border-bottom: 5px ridge #03FEFF;
     }
 
-    header .menu-item.active-menu {
+    header .active-menu {
         color: blue;
         text-decoration: none;
     }
 
-    header h1 {
+    h1 {
         font-size: 3em;
     }
 
@@ -48,20 +48,19 @@
         margin: 10px;
     }
 
-    img.facebook {
+    .facebook {
         height: 3em;
     }
 
     .email-item {
-            justify-content: space-evenly;
             margin: 0.8em;
         }
 
     @media screen and (max-width: 659px) {
 
         header .logo,
-        #shows img,
-        #links img {
+        .shows img,
+        .links img {
             width: 100%;
         }
 
@@ -69,7 +68,7 @@
             flex-direction: column;
         }
 
-        #contact .email-item a {
+        .contact .email-item a {
             margin: 0;
         }
 
@@ -79,23 +78,23 @@
 
     }
 
-    #contact .flex-container {
+    .contact .flex-container {
         flex-direction: column;
     }
 
     @media screen and (max-width: 426px) {
-        #home img.coming-soon {
+        .coming-soon {
             margin-top: 1.5em;
         }
     }
 
     @media screen and (max-width: 329px) {
-        body #home a img {
+        body .home a img {
             height: 5em;
         }
 
-        body #home a span,
-        #home span.vinyl {
+        body .home a span,
+        .vinyl {
             font-size: 1em;
         }
 
@@ -105,11 +104,11 @@
         display: none;
     }
 
-    .content-section.visible {
+    .visible {
         display: block;
     }
 
-    #contact a {
+    .contact a {
         font-size: 2rem;
         color: blue;
         margin: 0 2rem;
@@ -131,13 +130,13 @@
         height: 2em;
     }
 
-    #home img {
+    .home img {
         vertical-align: middle;
         height: 7em;
         margin: 0 1.5em 1.5em 0;
     }
 
-    #home span {
+    .home span {
         margin-right: 1em;
         font-size: 1.5em;
     }
