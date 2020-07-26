@@ -76,6 +76,11 @@
             display: none;
         }
 
+        header img {
+            /* when the flex-direction is column we don't need the right margin*/
+            margin-right: 0px;
+        }
+
     }
 
     .contact .flex-container {
