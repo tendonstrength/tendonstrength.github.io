@@ -2,6 +2,12 @@
     body {
         background-color: #cccccc;
         font-family: 'Comic Neue', cursive;
+        background-image: url('images/background.jpg');
+    }
+
+    .content-section, footer {
+        background-image: none;
+
     }
 
     a {
@@ -25,7 +31,7 @@
     /* header styles */
     header {
         margin: 42px 0;
-        border-bottom: 5px ridge #03FEFF;
+        border-bottom: 5px ridge #29d962;
     }
 
     header .active-menu {
