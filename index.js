@@ -16,6 +16,7 @@
 
     // Checks for a hash in the URL and updates the visible section if there is a match and also marks the correct menu item as selected
     function resolveUrl() {
+        if (!location.hash) return;
         loadContentSection(location.hash);
         var previousSelection = document.querySelector('.active-menu');
         const newActiveLink = document.querySelector(`[href="${location.hash}"]`);
